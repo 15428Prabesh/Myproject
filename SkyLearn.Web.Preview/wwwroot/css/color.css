@@ -1,0 +1,481 @@
+/*******  Nav Sec  *******/
+
+.nav_sec .navbar-light .navbar-nav .nav-link:hover,
+.nav_sec .navbar-light .navbar-nav .nav-link:focus {
+  color: #5076db;
+}
+
+.nav_sec .navbar-light .navbar-nav .show > .nav-link,
+.nav_sec .navbar-light .navbar-nav .active > .nav-link,
+.nav_sec .navbar-light .navbar-nav .nav-link.show,
+.nav_sec .navbar-light .navbar-nav .nav-link.active {
+  color: #5076db;
+}
+
+.nav_sec .navbar-light .navbar-nav .nav-link:hover:before {
+  background: #5076db;
+}
+
+.nav_sec .dropdown-item:hover,
+.nav_sec .dropdown-item.active {
+  background: #5076db;
+}
+
+.nav_sec .navbar-light .navbar-nav li.active:before {
+  background: #5076db;
+}
+
+.nav_sec .navbar-brand .blue {
+  color: #5076db;
+}
+
+.nav_sec .navbar-brand .green {
+  color: #5bc86d;
+}
+
+/*******  Slider Sec  *******/
+
+.slider_sec .slider_info h1 span {
+  color: #5076db;
+}
+
+.slider_sec .slider_info h1 .typer {
+  color: #5076db !important;
+}
+
+.slider_sec .slider_info .inner-text-left h1 {
+  border-left: 10px solid #5076db;
+}
+
+.banner_btn {
+  background: #5076db;
+}
+
+.banner_btn.green,
+.buy_btn.green {
+  background: #5bc86d;
+}
+
+.slider_sec .owl-carousel .owl-nav button.owl-prev:hover,
+.slider_sec .owl-carousel .owl-nav button.owl-next:hover {
+  background: #5076db !important;
+  border-color: #5076db;
+}
+
+.buy_btn {
+  background: #5076db;
+  box-shadow: 0 9px 20px rgba(80, 118, 219, 0.3);
+}
+
+.radial-out:hover {
+  background: #5076db;
+}
+
+.radial-out:before {
+  background: #5076db;
+}
+
+/*******  Messages Sec  *******/
+
+.messages_sec .message-img:after {
+  background-color: #5076db;
+}
+
+/*******  Academics  *******/
+
+.academic_sec .academic_block:hover {
+  background-color: #5bc86d;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.2);
+}
+.academic_sec .academic_block:hover h3,
+.academic_sec .academic_block:hover i,
+.academic_sec .academic_block:hover p {
+  color: #fff;
+}
+
+.academic_sec .academic_block:hover .more_link {
+  color: #fff;
+}
+
+.inner_sec .card ul li {
+  border-left: 2px solid #5076db;
+}
+
+.inner_sec .card ul li:hover {
+  border-color: #5bc86d;
+}
+
+/*******  Skill Sec  *******/
+
+.skill_sec .progress .track,
+.progress .fill {
+  stroke: #5076db;
+}
+
+.skill_sec .progress.blue .fill {
+  stroke: #5076db;
+}
+
+.skill_sec .progress .track {
+  stroke: #d7d7d7;
+}
+
+.skill_sec .progress.green .fill {
+  stroke: #5bc86d;
+}
+
+/*******  Portfolio Sec  *******/
+
+.portfolio_sec figure:hover .caption_global {
+  border-color: #5076db;
+}
+
+/*******  Why Sec  *******/
+
+.why_sec .count_block h3 strong {
+  color: #5076db;
+}
+
+/*******  Stories Sec  *******/
+
+.stories_sec .caption_global {
+  background: rgba(80, 118, 219, 0.9);
+}
+
+ul.team_social li a:hover {
+  background: #5076db;
+}
+
+.stories_sec .owl-carousel .owl-nav button.owl-prev:hover,
+.stories_sec .owl-carousel .owl-nav button.owl-next:hover {
+  background: #5076db !important;
+  border-color: #5076db;
+}
+
+.stories_sec .owl-carousel .owl-dot span {
+  background: #5076db;
+}
+
+.stories_sec .owl-carousel .owl-dot.active span {
+  background: #5076db;
+}
+
+/*******  Package Sec  *******/
+
+.package_sec .owl-item.active.center .package_block {
+  background: #5076db;
+}
+
+.package_sec .owl-item.active.center .package_block h3 {
+  color: #5076db;
+}
+
+.package_sec .package_block h3 {
+  color: #5076db;
+}
+
+ul.package_list li:before {
+  color: #5076db;
+}
+
+.package_sec .buy_btn {
+  background: #5076db;
+}
+
+.package_sec .owl-item.active.center .package_block .buy_btn {
+  background: #5076db;
+}
+
+.package_sec .owl-item.active.center .radial-out:hover {
+  background: #fff;
+  color: #000;
+}
+
+.package_sec .owl-carousel .owl-nav button.owl-prev:hover,
+.package_sec .owl-carousel .owl-nav button.owl-next:hover {
+  background: #5076db !important;
+  border-color: #5076db;
+}
+
+/*******  Testimonial Sec  *******/
+
+.testimonial_sec .more_info i {
+  background: url(../images/quote_img.png) top right no-repeat;
+}
+
+.testimonial_sec .owl-carousel .owl-nav button.owl-prev:hover,
+.testimonial_sec .owl-carousel .owl-nav button.owl-next:hover {
+  background: #5076db !important;
+  border-color: #5076db;
+}
+
+.testimonial_sec .owl-carousel .owl-dot span {
+  background: #5076db;
+}
+
+.testimonial_sec .owl-carousel .owl-dot.active span {
+  background: #5076db;
+}
+
+/*******  News Sec  *******/
+
+.news_sec .news_info .news_img label {
+  background: #5076db;
+}
+
+.news_sec .news_info:hover h3 a {
+  color: #5076db;
+}
+
+.news_sec .more_info a {
+  color: #5076db;
+}
+
+.news_sec .owl-carousel .owl-nav button.owl-prev:hover,
+.news_sec .owl-carousel .owl-nav button.owl-next:hover {
+  background: #5076db !important;
+  border-color: #5076db;
+}
+
+.news_sec .owl-carousel .owl-dot span {
+  background: #5076db;
+}
+
+.news_sec .owl-carousel .owl-dot.active span {
+  background: #5076db;
+}
+
+/*******  Instagram Sec  *******/
+
+.instagram_sec .insta_block:hover .caption_global {
+  border-color: #5076db;
+}
+
+.instagram_sec .owl-carousel .owl-nav button.owl-prev:hover,
+.instagram_sec .owl-carousel .owl-nav button.owl-next:hover {
+  background: #5076db !important;
+  border-color: #5076db;
+}
+
+.instagram_sec .owl-carousel .owl-dot span {
+  background: #5076db;
+}
+
+.instagram_sec .owl-carousel .owl-dot.active span {
+  background: #5076db;
+}
+
+/*******  Footer Sec  *******/
+
+.footer_detail .subscribe_btn {
+  background: #5076db;
+}
+
+ul.footer_link li a:hover {
+  color: #5076db;
+}
+
+ul.add_info li a:hover {
+  color: #5076db;
+}
+
+ul.footer_social li a:hover {
+  color: #5076db;
+}
+
+ul.footer_social li a:hover i {
+  border-color: #5076db;
+  color: #5076db;
+}
+
+.copyright span {
+  color: #5076db;
+}
+
+/*******  To Top  *******/
+
+#return-to-top {
+  background: #5076db;
+}
+
+#return-to-top:hover {
+  background: #5076db;
+}
+
+/*******  Inner Page  *******/
+
+.inner_banner h1 span {
+  color: #5076db;
+}
+
+ul.breadcrum li a {
+  color: #5076db;
+}
+
+.academic_sec.service_inn .inner {
+  background: url(../images/service_inn_bg.png) bottom center no-repeat;
+}
+
+.academic_sec .service_inn_block:hover h3 {
+  color: #5076db;
+}
+
+.academic_sec .service_inn_block figure {
+  background: url(../images/service_ic_1.png) center center no-repeat;
+}
+
+.academic_sec.service_inn
+  .left_info
+  .service_inn_block:hover:nth-child(1)
+  figure {
+  background: url(../images/service_ic_1_h.png) center center no-repeat;
+}
+
+.academic_sec.service_inn
+  .left_info
+  .service_inn_block:hover:nth-child(2)
+  figure {
+  background: url(../images/service_ic_4_h.png) center center no-repeat;
+}
+
+.academic_sec.service_inn
+  .left_info
+  .service_inn_block:hover:nth-child(3)
+  figure {
+  background: url(../images/service_ic_5_h.png) center center no-repeat;
+}
+
+.academic_sec.service_inn
+  .right_info
+  .service_inn_block:hover:nth-child(1)
+  figure {
+  background: url(../images/service_ic_2_h.png) center center no-repeat;
+}
+
+.academic_sec.service_inn
+  .right_info
+  .service_inn_block:hover:nth-child(2)
+  figure {
+  background: url(../images/service_ic_3_h.png) center center no-repeat;
+}
+
+.academic_sec.service_inn
+  .right_info
+  .service_inn_block:hover:nth-child(3)
+  figure {
+  background: url(../images/service_ic_6_h.png) center center no-repeat;
+}
+
+.academic_sec.service_inn .left_info .service_inn_block:nth-child(2) figure {
+  background: url(../images/service_ic_4.png) center center no-repeat;
+}
+
+.academic_sec.service_inn .left_info .service_inn_block:nth-child(3) figure {
+  background: url(../images/service_ic_5.png) center center no-repeat;
+}
+
+.academic_sec.service_inn .right_info .service_inn_block:nth-child(1) figure {
+  background: url(../images/service_ic_2.png) center center no-repeat;
+}
+
+.academic_sec.service_inn .right_info .service_inn_block:nth-child(2) figure {
+  background: url(../images/service_ic_3.png) center center no-repeat;
+}
+
+.academic_sec.service_inn .right_info .service_inn_block:nth-child(3) figure {
+  background: url(../images/service_ic_6.png) center center no-repeat;
+}
+
+.package_sec.package_inn .package_block.select {
+  background: #5076db;
+}
+
+.package_sec.package_inn .package_block.select h3 {
+  color: #5076db;
+}
+
+.package_sec.package_inn .package_block.select ul.package_list li {
+  color: #d5dcf5;
+}
+
+.package_sec.package_inn .package_block.select .buy_btn {
+  background: #5076db;
+}
+
+.package_sec.package_inn .package_block.select .radial-out:hover {
+  background: #fff;
+  color: #000;
+}
+
+.package_sec.sec_pricing .package_block .top_info {
+  background: #5076db;
+}
+
+.package_sec.third_pricing .package_block:hover .top_info {
+  background: #5076db;
+}
+
+.package_sec.third_pricing .package_block:hover .buy_btn {
+  background: #5076db;
+}
+
+.package_sec.sec_pricing .package_block .top_info:before {
+  background: url(../images/sec_pricing_curve.png) top left no-repeat;
+}
+
+/*layout 2 color css */
+.slider_sec_2:before,
+.academic_sec_2:after,
+.portfolio_sec_2:after,
+.package_sec_2:after,
+.work_sec_2:after,
+.instagram_sec_2:after {
+  background: url(../images/slider_curve.png) top center no-repeat;
+  background-size: 100% 100%;
+}
+.footer_detail_2:before {
+  background: url(../images/footer_curve.png) top center no-repeat;
+  background-size: 100% 100%;
+}
+
+/*layout 4 color css */
+.slider_sec_4:before {
+  background: url(../images/home_4_curve_2.png) top center no-repeat;
+  background-size: 100% 100%;
+}
+.academic_sec_4:before {
+  background: url(../images/home_4_curve_1.png) top center no-repeat;
+  background-size: 100% 100%;
+}
+.academic_sec_4:after {
+  background: url(../images/home_4_curve_2.png) top center no-repeat;
+  background-size: 100% 100%;
+}
+.portfolio_sec_4:before {
+  background: url(../images/home_4_curve_1.png) top center no-repeat;
+  background-size: 100% 100%;
+}
+.portfolio_sec_4:after {
+  background: url(../images/home_4_curve_2.png) top center no-repeat;
+  background-size: 100% 100%;
+}
+.stories_sec_4:before {
+  background: url(../images/home_4_curve_1.png) top center no-repeat;
+  background-size: 100% 100%;
+}
+.package_sec_4:before {
+  background: url(../images/testimonial_curve_2.png) top center no-repeat;
+  background-size: 100% 100%;
+}
+.work_sec_4:before {
+  background: url(../images/work_curve.png) top center no-repeat;
+  background-size: 100% 100%;
+}
+.instagram_sec_4:before {
+  background: url(../images/home_4_curve_2.png) top center no-repeat;
+  background-size: 100% 100%;
+}
+.footer_detail_4:before {
+  background: url(../images/home_4_curve_1.png) top center no-repeat;
+  background-size: 100% 100%;
+}

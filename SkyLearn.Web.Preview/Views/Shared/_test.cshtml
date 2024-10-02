@@ -1,0 +1,43 @@
+﻿@using System.Net.Http.Headers;
+@using System.Net.Http;
+@using System.Threading.Tasks;
+@using Application.Models;
+@using Core.Helper.APiCall;
+@using System.Net;
+@using Core;
+@using Application;
+@using Newtonsoft.Json;
+@using SkyLearn.Web.Preview.Models;
+@model string;
+
+
+@{
+    ContentDTO contentDTO = new ContentDTO()
+            {
+                Title = "",
+                Details = ""
+            };
+    string apiUrl = "https://api.nepalidev.com.np/api/portal/content/"; // Replace with your API URL
+    ApiClient apiClient = new ApiClient();
+    var myObject = new ComponentModel
+            {
+                Pid = @Model
+            };
+    apiUrl = apiUrl + myObject.Pid;
+    ApiResponse apiResponse = await apiClient.GetAsyncResult<ApiResponse>(apiUrl, HttpMethod.Get, new Dictionary<string, string>(), myObject);
+    if (apiResponse.status == HttpStatusCode.OK)
+    {
+        contentDTO = JsonConvert.DeserializeObject<Application.Models.ContentDTO>(apiResponse.data.ToString());
+    }
+}
+
+<div>
+    @if (apiResponse.status == HttpStatusCode.OK)
+    {
+        @Html.Raw(contentDTO.Details)
+      
+    }
+
+
+    <!-- Display other elements using data from 'apiResponse' -->
+</div>

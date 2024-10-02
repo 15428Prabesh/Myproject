@@ -1,0 +1,95 @@
+﻿@using System.Net.Http.Headers;
+@using System.Net.Http;
+@using System.Threading.Tasks;
+@using Application.Models;
+@using Core.Helper.APiCall;
+@using System.Net;
+@using Core;
+@using Application;
+@using Newtonsoft.Json;
+@using SkyLearn.Web.Preview.Models;
+@model ModelFields;
+
+
+
+@{
+    string? component_name = Model.ComponentName;
+    string apiPath = Model.ApiUrl + "?name=" + Model.ComponentName;
+    string Pid = "";
+    ComponentDTO? result;
+}
+@{
+    List<Schema>? comp_schemas = new List<Schema>();
+}
+@{
+
+    ApiClient? apiClient = new ApiClient();
+    ApiResponse? apiResponse = await apiClient.GetAsyncResult<ApiResponse>(apiPath
+        , Model.MethodType, Model.Header);
+    if (apiResponse.status == HttpStatusCode.OK)
+    {
+        result = JsonConvert.DeserializeObject<ComponentDTO>(apiResponse.data.ToString());
+        comp_schemas = JsonConvert.DeserializeObject<List<Schema>>(result.Schema.ToString());
+        Pid = result.Pid;
+    }
+}
+
+@*     binding components *@
+<div class="my-2 cls-form cls-@Model.ComponentName" data-attr=@Pid>
+    <form method="post">
+        <div class="form-row" style="margin-right:0;margin-left:0;justify-content:flex-start">
+            <div class="form-group col-md-12">
+                <h4>@Model.ComponentTitle</h4>
+            </div>
+            @foreach (var schema in comp_schemas)
+            {
+                if (schema.input_type.ToLower() == "select")
+                {
+                    <div class="form-group col-md-6">
+                        <label>@schema.label</label>
+                        <select type="select" class="form-control dy-frm" id="@schema.api_key" default="@comp_schemas[0].label">
+                            @foreach (var opt in schema.options)
+                            {
+                                <option value="@opt.value">@opt.label</option>
+                            }
+                        </select>
+                    </div>
+                }
+                else if (schema.input_type.ToLower() == "button")
+                {
+                    <div class="form-group col-md-12">
+                        <input type="button" class="@schema.classname" par="cls-@Model.ComponentName" id="@schema.api_key" value="@schema.label" />
+                    </div>
+                }
+                else if (schema.input_type.ToLower() == "checkbox")
+                {
+                    @if (schema.options.Length == 0)
+                    {
+                        <div class="form-check">
+                            <input class="form-check-input @schema.classname dy-frm" type="checkbox" value="" id="@schema.api_key">
+                            @if (schema.show_label)
+                            {
+                                <label>
+                                    @schema.label
+                                </label>
+                            }
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="form-group col-md-6">
+                        @if (schema.show_label)
+                        {
+                            <label>@schema.label</label>
+                        }
+                        <input required=@schema.required maxlength=@schema.length
+                               type=@schema.input_type class="@schema.classname dy-frm" id=@schema.api_key
+                               aria-describedby="form" placeholder="@schema.help_text">
+                    </div>
+                }
+            }
+        </div>
+    </form>
+</div>
+

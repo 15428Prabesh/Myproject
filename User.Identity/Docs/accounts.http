@@ -1,0 +1,42 @@
+@rootUrl=https://localhost:44369
+
+GET {{rootUrl}}/accounts
+###
+POST {{rootUrl}}/Accounts/register
+Content-Type: application/json
+
+{
+  "title": "Sushil",
+  "firstName": "Sushil",
+  "lastName": "Shrestha",
+  "email": "shoesheill@gmail.com",
+  "password": "bhandina",
+  "confirmPassword": "bhandina",
+  "acceptTerms": true
+}
+###
+PUT {{rootUrl}}/Accounts/1
+Content-Type: application/json
+ 
+{
+  "id": 0,
+  "title": "string",
+  "firstName": "string",
+  "lastName": "string",
+  "created": "2023-09-11T15:13:27.223Z",
+  "updated": "2023-09-11T15:13:27.223Z",
+  "isVerified": true
+}
+###
+GET {{rootUrl}}/accounts/1
+
+###
+POST {{rootUrl}}/accounts/authenticate
+Content-Type: application/json
+
+ {
+  "email": "user@example.com",
+  "password": "string"
+ }
+
+ 

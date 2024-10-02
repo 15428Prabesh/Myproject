@@ -1,0 +1,65 @@
+{
+  //upstream is the request coming to the api gateway (incoming request)
+  //downstrea, is the request to be routed to the api service
+  //"Routes": [
+  //  {
+  //    "UpstreamPathTemplate": "/api/accounts",
+  //    "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+  //    "DownstreamScheme": "http",
+  //    "DownstreamHostAndPorts": [
+  //      {
+  //        "Host": "localhost", // Use Docker hostname from docker-compose.yml if you are using Docker Compose
+  //        "Port": 8941
+  //      }
+  //    ],
+  //    "DownstreamPathTemplate": "/accounts"
+  //  },
+  //  {
+  //    "UpstreamPathTemplate": "/api/accounts/{idx}",
+  //    "UpstreamHttpMethod": [ "GET", "DELETE" ], 
+  //    "DownstreamScheme": "http",
+  //    "DownstreamHostAndPorts": [
+  //      {
+  //        "Host": "localhost",
+  //        "Port": 8941
+  //      }
+  //    ],
+  //    "DownstreamPathTemplate": "/accounts/{idx}"
+  //  }
+
+  //  // Similar configuration for other APIs
+  //],
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/api/user/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "PATCH" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", // Use Docker hostname from docker-compose.yml if you are using Docker Compose
+          "Port": 8941
+        }
+      ],
+      "DownstreamPathTemplate": "/api/{everything}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/portal/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "PATCH" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", // Use Docker hostname from docker-compose.yml if you are using Docker Compose
+          "Port": 5075
+        }
+      ],
+      "DownstreamPathTemplate": "/api/{everything}"
+    }
+
+    // Add similar configuration for other controllers if needed
+  ],
+
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:20883"
+  }
+
+}

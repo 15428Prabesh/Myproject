@@ -1,0 +1,53 @@
+﻿@using System.Net.Http.Headers;
+@using System.Net.Http;
+@using System.Threading.Tasks;
+@using Core.Helper.APiCall;
+@using System.Net;
+@using Core;
+@using Application;
+@using Newtonsoft.Json;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model ModelFields;
+
+
+
+@{
+    string? component_name = Model.ComponentName;
+    string apiPath = Model.ApiUrl + "" + Model.ComponentName;
+    string Pid = "";
+    Content? result=new Content();
+}
+@{
+    List<Schema>? comp_schemas = new List<Schema>();
+}
+@{
+
+    ApiClient? apiClient = new ApiClient();
+    ApiResponse? apiResponse = await apiClient.GetAsyncResult<ApiResponse>(apiPath
+        , Model.MethodType, Model.Header);
+    if (apiResponse.status == HttpStatusCode.OK)
+    {
+        result = JsonConvert.DeserializeObject<Content>(apiResponse.data.ToString());
+    }
+}
+@*     binding components *@
+<div class=@result.title>
+    <div>
+        @{
+            if (result.isTitleVisible)
+            {
+                <>
+                   @Html.Raw(result.title)
+                </>
+            }
+        }
+        <div>
+           @Html.Raw(result.details)
+        </div>
+    </div>
+</div>
